@@ -1,0 +1,7 @@
+pyautogui
+opencv-python
+pygetwindow
+mss
+numpy
+ttkthemes
+keyboard
