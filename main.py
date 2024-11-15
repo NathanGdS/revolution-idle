@@ -60,6 +60,13 @@ class BotThread:
             self.interface.label_info(self)
 
     def start(self):
+        if self.box is None:
+            print("No image detected, impossible to start the bot")
+            return
+        
+        if self.is_running:
+            print("Bot is already running!")
+            return
         self.is_running = True
         self.interface.count_running__time(self.interface, self)
         self.thread = threading.Thread(target=self.runClickBot)
